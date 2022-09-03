@@ -247,6 +247,34 @@
         }
       }
     }
+
+    .image-container {
+      width: 100%;
+      max-width: 1100px;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -54vh;
+        right: -35px;
+        transform: rotate(90deg);
+        background-image: url('../../images/highlight-01.png');
+        background-size: contain;
+
+        animation: BeforeAnim 5s;
+
+        @keyframes BeforeAnim {
+          0% {
+            opacity: 0;
+          } 100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   .partners-section {
@@ -576,6 +604,12 @@
           color: rgba(30, 30, 32, 0.24);
           text-decoration: none;
           font-weight: 500;
+
+          transition: 0.5s;
+
+          &:hover {
+            color: rgba(30, 30, 32, 0.75);
+          }
 
           &:not(:last-child) {
             margin-bottom: 20px;

@@ -40,9 +40,9 @@ function HomePage() {
         <header>
           <nav>
             <img src={logo} alt="Hush logo" />
-            <Link to="/contato">Contato</Link>
-            <Link to="/contato">Contato</Link>
-            <Link to="/contato">Contato</Link>
+            <Link to="/">Products</Link>
+            <Link to="/">Pricing</Link>
+            <Link to="/">Patch Release</Link>
           </nav>
 
           <button>Create Account</button>
@@ -58,7 +58,9 @@ function HomePage() {
       </div>
 
       <div className="print-product">
-        <img src={print01} alt="Image print of product" style={{ transform: `translateY(${offsetY*0.05}px)`}} id="imageScroll"/>
+        <div className='image-container'>
+          <img src={print01} alt="Image print of product" style={{ transform: `translateY(${offsetY*0.05}px)`}} id="imageScroll"/>
+        </div>
       </div>
 
       <div className="partners-section" data-aos="slide-up">
