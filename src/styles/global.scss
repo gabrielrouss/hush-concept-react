@@ -12,3 +12,8 @@ body {
 body, input, button, textarea {
   font: 400 16px manrope, sans-serif;
 }
+
+::selection {
+  color: black;
+  background: white;
+}

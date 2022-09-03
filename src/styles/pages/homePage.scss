@@ -24,6 +24,17 @@
       justify-content: space-between;
 
       padding: 10px 0;
+
+      animation: animInHeader ease-in-out 1.5s;
+
+      @keyframes animInHeader {
+        0% {
+          opacity: 0;
+          transform: translateY(-75px);
+        } 100% {
+          opacity: 1;
+        }
+      }
   
       nav{
         display: flex;
@@ -32,6 +43,29 @@
 
         img {
           margin-right: 50px;
+
+          &:hover {
+            animation: bounce 1s;
+            animation-iteration-count: infinite;
+
+            @keyframes bounce {
+              0%, 100%, 20%, 50%, 80% {
+                -webkit-transform: translateY(0);
+                -ms-transform:     translateY(0);
+                transform:         translateY(0)
+              }
+              40% {
+                -webkit-transform: translateY(-30px);
+                -ms-transform:     translateY(-30px);
+                transform:         translateY(-30px)
+              }
+              60% {
+                -webkit-transform: translateY(-15px);
+                -ms-transform:     translateY(-15px);
+                transform:         translateY(-15px)
+              }
+            }
+          }
         }
   
         a {
@@ -57,6 +91,17 @@
         border: 1px solid #a3a4a680;
         border-radius: 9999px;
         background-color: rgba(0,0,0,0);
+        box-shadow: 0px 0px 0px black;
+
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          color: #f4f4f4;
+          border-color: #f4f4f4;
+          transform: matrix(1, 0, 0, 1, -10, -10,);
+          box-shadow: 10px 10px 0px black;
+        }
       }
     }
 
@@ -124,7 +169,7 @@
         margin-top: 50px;
         margin-bottom: 100px;
 
-        animation: animInButton ease-in-out 1.2s;
+        animation: animInButton ease-in-out 2s;
 
         @keyframes animInButton {
           0% {
